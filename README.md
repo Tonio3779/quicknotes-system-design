@@ -53,7 +53,7 @@ quicknotes-app/
 2. Enter the project directory:
 
    ```bash
-   cd quicknotes-app
+   cd quicknotes-system-design
    ```
 
 3. Open the folder in Visual Studio Code:
