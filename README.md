@@ -47,7 +47,7 @@ quicknotes-app/
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/quicknotes-app.git
+   git clone https://github.com/Tonio3779/quicknotes-system-design.git
    ```
 
 2. Enter the project directory:
