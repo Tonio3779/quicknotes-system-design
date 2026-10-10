@@ -31,7 +31,7 @@ targeting one million registered users.
 ## Project structure
 
 ```text
-quicknotes-app/
+quicknotes-system-design/
 ├── index.html
 ├── api.js
 ├── style.css
