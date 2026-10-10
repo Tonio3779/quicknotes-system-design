@@ -196,7 +196,7 @@ async function createNote(event) {
             body: JSON.stringify({
                 title,
                 body,
-                userId: 2
+                userId: 1
             })
         });
 
