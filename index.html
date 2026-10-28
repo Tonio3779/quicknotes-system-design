@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="QuickNotes API client for creating, loading, and deleting notes.">
+    <title>QuickNotes | Notes Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="api.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="brand" href="#" aria-label="QuickNotes home">
+                <span class="brand-icon" aria-hidden="true">Q</span>
+                <span>QuickNotes</span>
+            </a>
+            <span class="environment-label">API Demo</span>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section class="intro">
+            <p class="eyebrow">YOUR PERSONAL WORKSPACE</p>
+            <h1>Notes, made simple.</h1>
+            <p class="intro-text">
+                Create, load, and manage your notes using the QuickNotes API client.
+            </p>
+        </section>
+
+        <section class="panel composer" aria-labelledby="create-heading">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">NEW NOTE</p>
+                    <h2 id="create-heading">Create a note</h2>
+                </div>
+            </div>
+
+            <form id="note-form">
+                <div class="form-field">
+                    <label for="note-title">Title <span class="required">*</span></label>
+                    <input
+                        id="note-title"
+                        name="title"
+                        type="text"
+                        maxlength="100"
+                        placeholder="Give your note a title"
+                        required
+                        aria-describedby="title-help"
+                    >
+                    <div class="field-meta">
+                        <small id="title-help">Required. Maximum 100 characters.</small>
+                        <small id="title-count">0/100</small>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label for="note-body">Note body</label>
+                    <textarea
+                        id="note-body"
+                        name="body"
+                        rows="4"
+                        placeholder="Write your thoughts here (optional)"
+                    ></textarea>
+                </div>
+
+                <button id="create-button" class="button button-primary" type="submit">
+                    Create note
+                </button>
+            </form>
+        </section>
+
+        <section class="notes-section" aria-labelledby="notes-heading">
+            <div class="notes-heading">
+                <div>
+                    <p class="eyebrow">YOUR COLLECTION</p>
+                    <h2 id="notes-heading">Your notes</h2>
+                </div>
+                <button id="load-button" class="button button-secondary" type="button">
+                    Load notes
+                </button>
+            </div>
+
+            <div id="status-message" class="status-message" role="status"
+                 aria-live="polite" hidden></div>
+
+            <div id="notes-list" class="notes-grid" aria-live="polite">
+                <div class="empty-state">
+                    <span class="empty-icon" aria-hidden="true">✎</span>
+                    <h3>Ready when you are</h3>
+                    <p>Select “Load notes” to retrieve notes from the server.</p>
+                </div>
+            </div>
+
+            <p class="demo-notice">
+                <strong>Demo limitation:</strong> This project uses JSONPlaceholder.
+                Created and deleted notes are not permanently stored by that service.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>QuickNotes &copy; 2026 · System Design Project</p>
+        </div>
+    </footer>
+</body>
+</html>
